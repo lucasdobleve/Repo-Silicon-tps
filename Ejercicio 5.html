@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>
-        </title>
-		
-	</head>
-	<body>
-		<script></script>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+	</title>
+
+</head>
+
+<body>
+	<script>
+		//Crear una función que muestre información sobre una cadena de texto que se le pasa como
+		//argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está
+		//formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+
+		function infoString(cadenaDeTexto) {
+
+			if (cadenaDeTexto === cadenaDeTexto.toLowerCase()) {
+				document.write("La cadena de texto está compuesta por minúsculas");
+			} else if (cadenaDeTexto === cadenaDeTexto.toUpperCase()) {
+				document.write("La cadena de texto está compuesta por mayúsculas");
+			} else {
+				document.write("La cadena de texto alterna mayúsculas y minúsculas");
+			}
+		}
+		infoString(cadenaDeTexto = prompt("Ingrese una frase"));
+	</script>
+</body>
+
 </html>
