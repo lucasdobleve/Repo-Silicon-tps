@@ -3,10 +3,24 @@
 	<head>
 		<meta charset="utf-8">
 		<title>
+			Ejercicio 7
         </title>
-		
+	<h1>
+		Ejercicio 7
+	</h1>
 	</head>
 	<body>
-		<script></script>
+		<p id= "demo"></p>
+		<script>
+			//Escribir una función que reciba un texto y lo devuelva al revés.
+			let cadena=prompt("Ingrese un texto");
+			function inversorDeCadena(cadena){
+				var separarLaCadena = cadena.split("");
+				var invertirElArreglo = separarLaCadena.reverse();
+				var unirArreglo = invertirElArreglo.join ("");
+				return unirArreglo;
+			}
+			document.getElementById("demo").innerHTML = inversorDeCadena(cadena);
+		</script>
 	</body>
 </html>
