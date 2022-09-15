@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>
-        </title>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Ejercicio 10
+	</title>
+	<h1>Ejercicio 10</h1>
+</head>
+
+<body>
+	<script>
+		//Escribir un programa que reciba el número del mes y devuelva si tiene 31, 30 o menos días.
+		//Por ejemplo:12 = tiene 31 días.
+		const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+			"Octubre", "Noviembre", "Diciembre"];
 		
-	</head>
-	<body>
-		<script></script>
-	</body>
+		var nroDelMes = prompt("Ingrese un número para saber el mes")
+		
+		let dameElMes = new Date (2022, (nroDelMes-1), );
+		
+		let mesActual = meses[dameElMes.getMonth(nroDelMes)];
+
+		let cuantosDias = new Date (dameElMes.getFullYear(), dameElMes.getMonth(nroDelMes)+1, 0).getDate();
+		
+		document.write("El mes elegido es ",mesActual, "<br>");
+		document.write("El mes tiene: ",cuantosDias," días");
+
+	</script>
+</body>
+
 </html>
