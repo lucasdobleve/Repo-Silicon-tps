@@ -17,14 +17,40 @@
 			//“Reprobado”, entre 6 y 8 “Aprobado” y si es mayor a 8 “Sobresaliente”
 			var notas= [];
 			var cantidadNotas=prompt("Ingrese la cantidad de notas que va a tener el alumno");
-			//por el momento no haré una función de control de los numeros ingresados
 			for (i=0; i<cantidadNotas; i++){
-				notas.push(prompt("Ingrese la nota"));
-				//proximamente hago un control de los límites del número y el tipo 
+				let ingresar=prompt("Ingrese una nota");
+				//hago un control de los límites del número y el tipo 
+				while (ingresar>10 || ingresar<1) {
+					alert("Número incorrecto, intente nuevamente");
+					ingresar=0;
+					ingresar=prompt("Ingrese una nota");
+					if (ingresar<11 || ingresar>0){
+						break;
+					} 
+				}
+				notas.push(ingresar);
 			}
-			document.write("Las notas son: ",notas);
-			//falta hacer los promedios
+			let suma=0;
+			
+			function promedio(sumados, cantidades){
+				return sumados/cantidades;
+			}
 
+			for (i=0; i<cantidadNotas; i++){
+				suma+=Math.abs(notas[i]);
+			}
+			promedioAlumno1=promedio(suma,cantidadNotas)
+			document.write("Las notas son: "+notas+"<br>");
+			document.write("El promedio es de: "+promedioAlumno1,"<br>");
+			
+			if (promedioAlumno1<=5){
+				document.write("Reprobado");
+			} else if (promedioAlumno1>5 && promedioAlumno1<=8){
+				document.write("Aprobado");
+			} else {
+				document.write("Sobresaliente");
+			}
+			
 		</script>
 	</body>
 </html>
