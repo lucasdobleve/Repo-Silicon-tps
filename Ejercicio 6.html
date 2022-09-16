@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>
-        </title>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Ejercicio 6
+	</title>
+	<h1>Ejercicio 6</h1>
+</head>
+
+<body>|
+	<script>
+		//Escribir un script que muestre la posición de la primera vocal de un texto introducido por
+		//teclado.Por ejemplo: perro = “e” es la letra Nº2 ; árbol = “a” es la letra Nº1.
+		let texto = prompt("Ingrese una palabra");
+		let expresion = /[aeiou]/;
+		let textoEmparejamiento= texto.match(expresion);
+		document.write("La primer vocal del texto ", texto, " es la letra ",textoEmparejamiento, " y se encuentra en la posición ",
+		(texto.indexOf(textoEmparejamiento)+1));
 		
-	</head>
-	<body>
-		<script></script>
-	</body>
+	</script>
+</body>
+
 </html>
